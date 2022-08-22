@@ -1,0 +1,5 @@
+https://simpleisbetterthancomplex.com/tutorial/2016/11/23/how-to-add-user-profile-to-django-admin.html
+https://simpleisbetterthancomplex.com/tutorial/2018/01/18/how-to-implement-multiple-user-types-with-django.html
+https://www.crunchydata.com/blog/extending-djangos-user-model-with-onetoonefield
+https://studygyaan.com/django/django-rest-framework-tutorial-register-login-logout
+How to extend the User Model in Django with AbstractUser - https://www.youtube.com/watch?v=1BeZxMbSZNI
