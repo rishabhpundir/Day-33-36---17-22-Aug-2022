@@ -3,6 +3,7 @@ from .serializers import CourseSerializer, ChapterSerializer, AssignmentSerializ
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView, GenericAPIView
 from rest_framework.response import Response
 from rest_framework.authentication import TokenAuthentication
+from rest_framework.authtoken.models import Token
 from rest_framework.permissions import IsAuthenticated
 from .permissions import OnlyAdminsCanEdit
 
@@ -57,8 +58,10 @@ class RegisterView(GenericAPIView):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
+        token, created = Token.objects.get_or_create(user=user)
         return Response({
-        "user": 'new user registered successfully!'
+        "user": 'new user registered successfully!',
+        "Token": token.key,
         })
 
 
